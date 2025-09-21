@@ -150,7 +150,7 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-                <p className="text-gray-300">Thanks for reaching out. I'll get back to you soon.</p>
+                <p className="text-gray-300">Thanks for reaching out. I&apos;ll get back to you soon.</p>
               </div>
             ) : (
               <form className="space-y-6" onSubmit={handleSubmit}>
@@ -182,7 +182,7 @@ export default function Contact() {
                   <label htmlFor="message" className="block text-gray-300 mb-2 text-lg">Message</label>
                   <textarea 
                     id="message" 
-                    rows="5"
+                    rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
                     className="w-full px-6 py-4 bg-gray-900 bg-opacity-70 border border-gray-700 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-white backdrop-blur-md transition-all duration-300 hover:bg-gray-800/50 resize-none"
