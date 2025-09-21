@@ -1,6 +1,5 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -11,7 +10,7 @@ const Work = () => {
   const itemsRef = useRef<any>([]);
   const titleRef = useRef<any>(null);
   const imageRefs = useRef<any>([]);
-  const [hoveredProject, setHoveredProject] = useState(null);
+  const [hoveredProject, setHoveredProject] = useState<any>(null);
   
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -156,7 +155,7 @@ const Work = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            ref={el => (imageRefs.current[project.id] = el)}
+            ref={el => {imageRefs.current[project.id] = el}}
             className="absolute inset-0 flex items-center justify-center opacity-0 scale-90 transition-all duration-400"
           >
             <div className="relative w-full max-w-4xl h-96">
@@ -187,7 +186,7 @@ const Work = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              ref={el => itemsRef.current[index] = el}
+              ref={el => {itemsRef.current[index] = el}}
               className="portfolio-item group relative overflow-hidden"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}

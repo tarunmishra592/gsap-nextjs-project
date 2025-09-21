@@ -1,4 +1,3 @@
-// components/Skills.jsx
 'use client';
 import React, { useRef, useEffect, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -11,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 // 3D Skill Orb Component
 const SkillOrb = ({ skill, index, totalSkills, isActive, onClick }) => {
-  const meshRef = useRef();
+  const meshRef = useRef<any>(null);
   const [hovered, setHovered] = useState(false);
   
   // Calculate position in a circle
@@ -97,7 +96,7 @@ const SkillOrb = ({ skill, index, totalSkills, isActive, onClick }) => {
 
 // Central Main Orb
 const CentralOrb = ({ activeSkill }) => {
-  const meshRef = useRef();
+  const meshRef = useRef<any>(null);
   
   useFrame((state) => {
     if (meshRef.current) {
@@ -127,7 +126,7 @@ const CentralOrb = ({ activeSkill }) => {
 
 // Particle System
 const Particles = ({ count = 100, activeSkill }) => {
-  const pointsRef = useRef();
+  const pointsRef = useRef<any>(null);
   const particlesPosition = useRef(new Float32Array(count * 3));
   
   useEffect(() => {
@@ -189,8 +188,7 @@ const Particles = ({ count = 100, activeSkill }) => {
 
 // Main Skills Component
 const Skills = () => {
-  const sectionRef = useRef();
-  const containerRef = useRef();
+  const sectionRef = useRef<any>(null);
   const [activeSkill, setActiveSkill] = useState(null);
   const [mounted, setMounted] = useState(false);
 
