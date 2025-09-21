@@ -4,7 +4,6 @@ import { gsap } from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import GlobeWithSvg from './GlobeWithStand';
 
 const Hero = () => {
   const containerRef = useRef(null);
@@ -12,11 +11,11 @@ const Hero = () => {
   const subtitleRef = useRef(null);
   const gradientRef = useRef(null);
   const earthRef = useRef(null);
-  const starsContainerRef = useRef(null);
+  const starsContainerRef = useRef<any>(null);
 
   useEffect(() => {
     const starCount = 150;
-    const stars = [];
+    const stars: any[] = [];
 
     for (let i = 0; i < starCount; i++) {
       const star = document.createElement('div');
