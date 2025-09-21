@@ -29,7 +29,7 @@ export default function About(){
     const imageRef = useRef<any>(null)
     const timelineRef = useRef(null)
     const aboutRef = useRef(null)
-    const timeLineDotsRef = useRef<any>([])
+    const timeLineDotsRef = useRef<(any)[]>([]);
     const timelineLineRef = useRef(null)
 
     useEffect(() => {
@@ -185,7 +185,7 @@ export default function About(){
                                     </div>
 
 
-                                    <div ref={(el) => (timeLineDotsRef.current[i] = el)} className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 border-4 border-gray-900 z-10" />
+                                    <div ref={(el) => {timeLineDotsRef.current[i] = el}} className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 border-4 border-gray-900 z-10" />
                                         <div className={`w-full md:w-5/12 ${i % 2 ? 'md:px-8 order-1' : 'md:pr-8'}`}>
                                             <p className="text-gray-400">
                                                 {journey.description}
