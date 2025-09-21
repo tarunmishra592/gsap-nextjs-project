@@ -147,7 +147,7 @@ export default function About(){
                 <div className="flex flex-col lg:flex-row items-center gap-12 mb-20">
                     <div ref={contentRef} className="w-full lg:w-1/2 text-gray-300 text-lg space-y-6">
                         <p>
-                            I'm a passionate software developer and interactive designer with
+                            I&apos;m a passionate software developer and interactive designer with
                             over 15 years of experience creating immersive digital experiences.
                         </p>
                         <p>
@@ -156,7 +156,7 @@ export default function About(){
                             but also provide engaging user experiences.
                         </p>
                         <p>
-                            When I'm not coding, you can find me exploring new design trends,
+                            When I&apos;m not coding, you can find me exploring new design trends,
                             experimenting with 3D graphics, or contributing to open-source
                             projects.
                         </p>
